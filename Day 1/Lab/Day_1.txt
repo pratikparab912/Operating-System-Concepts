@@ -1,0 +1,268 @@
+root@DESKTOP-Q611GTL:~# date
+Mon Sep  7 17:48:51 IST 2020
+root@DESKTOP-Q611GTL:~# date + %a
+date: extra operand ‘%a’
+Try 'date --help' for more information.
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# date +%a
+Mon
+root@DESKTOP-Q611GTL:~# date +%A
+Monday
+root@DESKTOP-Q611GTL:~# date +%b
+Sep
+root@DESKTOP-Q611GTL:~# date +%B
+September
+root@DESKTOP-Q611GTL:~# date +%d
+07
+root@DESKTOP-Q611GTL:~# date +%D
+09/07/20
+root@DESKTOP-Q611GTL:~# date +%F
+2020-09-07
+root@DESKTOP-Q611GTL:~# date +%T
+17:54:12
+root@DESKTOP-Q611GTL:~# date +%B%d&Y
+[1] 57
+September07
+Y: command not found
+[1]+  Done                    date +%B%d
+root@DESKTOP-Q611GTL:~# date +%B/%d/%Y
+September/07/2020
+root@DESKTOP-Q611GTL:~# date +%B %d %Y
+date: extra operand ‘%d’
+Try 'date --help' for more information.
+root@DESKTOP-Q611GTL:~# date +%B +%d +%Y
+date: extra operand ‘+%d’
+Try 'date --help' for more information.
+root@DESKTOP-Q611GTL:~# date +%B''%d''%Y
+September072020
+root@DESKTOP-Q611GTL:~# date +%B' '%d' '%Y
+September 07 2020
+root@DESKTOP-Q611GTL:~# date +"%B %d %Y %T"
+September 07 2020 18:04:34
+root@DESKTOP-Q611GTL:~# cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+root@DESKTOP-Q611GTL:~# cal 2020
+                            2020
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                     1   1  2  3  4  5  6  7
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   8  9 10 11 12 13 14
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  15 16 17 18 19 20 21
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  22 23 24 25 26 27 28
+26 27 28 29 30 31     23 24 25 26 27 28 29  29 30 31
+
+
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                  1  2      1  2  3  4  5  6
+ 5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13
+12 13 14 15 16 17 18  10 11 12 13 14 15 16  14 15 16 17 18 19 20
+19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27
+26 27 28 29 30        24 25 26 27 28 29 30  28 29 30
+                      31
+
+        July                 August              September
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                     1         1  2  3  4  5
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   6  7  8  9 10 11 12
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  13 14 15 16 17 18 19
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  20 21 22 23 24 25 26
+26 27 28 29 30 31     23 24 25 26 27 28 29  27 28 29 30
+                      30 31
+
+      October               November              December
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+             1  2  3   1  2  3  4  5  6  7         1  2  3  4  5
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   6  7  8  9 10 11 12
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  13 14 15 16 17 18 19
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  20 21 22 23 24 25 26
+25 26 27 28 29 30 31  29 30                 27 28 29 30 31
+
+root@DESKTOP-Q611GTL:~# cal-m1
+cal-m1: command not found
+root@DESKTOP-Q611GTL:~# cal -m1
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+root@DESKTOP-Q611GTL:~# cal Jan 2020
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+root@DESKTOP-Q611GTL:~# cal Sep 2020
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+root@DESKTOP-Q611GTL:~# cal sep 2020
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# pwd /user/bin
+/root
+root@DESKTOP-Q611GTL:~# cd /usr/bin
+root@DESKTOP-Q611GTL:/usr/bin# cd /
+root@DESKTOP-Q611GTL:/# pwd
+/
+root@DESKTOP-Q611GTL:/# cd /root
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# cd /usr
+root@DESKTOP-Q611GTL:/usr# cd /root
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# ls
+file_name  first  hello.sh  index.html  pratik  second  seng  third
+root@DESKTOP-Q611GTL:~# ls -l
+total 0
+-rw-rw-rw- 1 root root   0 Apr  3 22:02 file_name
+drwxrwxrwx 1 root root 512 Apr  1 10:54 first
+-rwxrwxrwx 1 root root   0 Apr  4 17:50 hello.sh
+-rw-rw-rw- 1 root root   0 Apr 14 12:15 index.html
+drwxrwxrwx 1 root root 512 Apr 13 11:18 pratik
+drwxrwxrwx 1 root root 512 Apr  1 10:55 second
+drwxrwxrwx 1 root root 512 Apr 13 11:19 seng
+drwxrwxrwx 1 root root 512 Apr  1 10:55 third
+root@DESKTOP-Q611GTL:~# ls -t
+index.html  seng  pratik  hello.sh  file_name  third  second  first
+root@DESKTOP-Q611GTL:~# ls -s
+total 0
+0 file_name  0 first  0 hello.sh  0 index.html  0 pratik  0 second  0 seng  0 third
+root@DESKTOP-Q611GTL:~# ls -r
+third  seng  second  pratik  index.html  hello.sh  first  file_name
+root@DESKTOP-Q611GTL:~# ls -a
+.   .bash_history  .cache   .filename.sh.swo  .local    .viminfo   first     index.html  second  third
+..  .bashrc        .config  .gnupg            .profile  file_name  hello.sh  pratik      seng
+root@DESKTOP-Q611GTL:~# ls -A
+.bash_history  .bashrc  .cache  .config  .filename.sh.swo  .gnupg  .local  .profile  .viminfo  file_name  first  hello.sh  index.html  pratik  second  seng  third
+root@DESKTOP-Q611GTL:~# ls -ltr
+total 0
+drwxrwxrwx 1 root root 512 Apr  1 10:54 first
+drwxrwxrwx 1 root root 512 Apr  1 10:55 second
+drwxrwxrwx 1 root root 512 Apr  1 10:55 third
+-rw-rw-rw- 1 root root   0 Apr  3 22:02 file_name
+-rwxrwxrwx 1 root root   0 Apr  4 17:50 hello.sh
+drwxrwxrwx 1 root root 512 Apr 13 11:18 pratik
+drwxrwxrwx 1 root root 512 Apr 13 11:19 seng
+-rw-rw-rw- 1 root root   0 Apr 14 12:15 index.html
+root@DESKTOP-Q611GTL:~# ls *.txt
+ls: cannot access '*.txt': No such file or directory
+root@DESKTOP-Q611GTL:~# ls f?.txt
+ls: cannot access 'f?.txt': No such file or directory
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# cd .
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# cd ..
+root@DESKTOP-Q611GTL:/# pwd
+/
+root@DESKTOP-Q611GTL:/# cd /
+root@DESKTOP-Q611GTL:/# pwd
+/
+root@DESKTOP-Q611GTL:/# ls
+backup  bin  boot  dev  etc  file1.txt  home  init  lib  lib64  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+root@DESKTOP-Q611GTL:/# cd /usr
+root@DESKTOP-Q611GTL:/usr# ls
+bin  games  include  lib  local  sbin  share  src
+root@DESKTOP-Q611GTL:/usr# cd /bin
+root@DESKTOP-Q611GTL:/bin# pwd
+/bin
+root@DESKTOP-Q611GTL:/bin# cd ..
+root@DESKTOP-Q611GTL:/# pwd
+/
+root@DESKTOP-Q611GTL:/# cd /usr/bin
+root@DESKTOP-Q611GTL:/usr/bin# pwd
+/usr/bin
+root@DESKTOP-Q611GTL:/usr/bin# cd ./bin
+-bash: cd: ./bin: No such file or directory
+root@DESKTOP-Q611GTL:/usr/bin# cd . /bin
+-bash: cd: too many arguments
+root@DESKTOP-Q611GTL:/usr/bin# cd /bin
+root@DESKTOP-Q611GTL:/bin# cd ..
+root@DESKTOP-Q611GTL:/# pwd
+/
+root@DESKTOP-Q611GTL:/# cd /root
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# touch s1.txt
+root@DESKTOP-Q611GTL:~# ls
+file_name  first  hello.sh  index.html  pratik  s1.txt  second  seng  third
+root@DESKTOP-Q611GTL:~# catch s1.txt
+
+Command 'catch' not found, did you mean:
+
+  command 'patch' from deb patch
+  command 'watch' from deb procps
+  command 'batch' from deb at
+  command 'match' from deb mailavenger
+
+Try: apt install <deb name>
+
+root@DESKTOP-Q611GTL:~# cat s1.txt
+root@DESKTOP-Q611GTL:~# cat >s1.txt
+CDAC Mumbai
+
+root@DESKTOP-Q611GTL:~# cat s1.txt
+CDAC Mumbai
+
+root@DESKTOP-Q611GTL:~# mkdir dir1
+root@DESKTOP-Q611GTL:~#
+root@DESKTOP-Q611GTL:~#
+root@DESKTOP-Q611GTL:~# mkdir dir1 dir2 dir3
+mkdir: cannot create directory ‘dir1’: File exists
+root@DESKTOP-Q611GTL:~# ls
+dir1  dir2  dir3  file_name  first  hello.sh  index.html  pratik  s1.txt  second  seng  third
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# mv dir1 dir2
+root@DESKTOP-Q611GTL:~# cd dir2
+root@DESKTOP-Q611GTL:~/dir2# ls
+dir1
+root@DESKTOP-Q611GTL:~/dir2# cmd /
+
+Command 'cmd' not found, but there are 16 similar ones.
+
+root@DESKTOP-Q611GTL:~/dir2# cd -h
+-bash: cd: -h: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+root@DESKTOP-Q611GTL:~/dir2# cd help
+-bash: cd: help: No such file or directory
+root@DESKTOP-Q611GTL:~/dir2# cd man
+-bash: cd: man: No such file or directory
+root@DESKTOP-Q611GTL:~/dir2# cd /dir2
+-bash: cd: /dir2: No such file or directory
+root@DESKTOP-Q611GTL:~/dir2# cd ..
+root@DESKTOP-Q611GTL:~# pwd
+/root
+root@DESKTOP-Q611GTL:~# ls
+dir2  dir3  file_name  first  hello.sh  index.html  pratik  s1.txt  second  seng  third
+root@DESKTOP-Q611GTL:~#

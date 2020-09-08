@@ -1,0 +1,181 @@
+1.
+1.1.date =>day date time will be shown
+date +%a =>short name of day will be shown only
+date +%A =>full name of day will be shown only
+date +%b =>short name of month will be shown only
+date +%B =>full name of month will be shown only
+date +%d =>short date will be shown only
+date +%D =>full date format will be shown with forward slashes only
+date +%F =>full date format will be shown with hi-fens only
+date +%T =>time will be shown only
+
+1.2.
+cal => show calendar
+cal jan 2020
+
+1.3.
+bc => is basic calculator in linux. after typing this command one can do basic calculator operations
+
+1.4.
+echo => echo command in linux is used to display line of text/string that are passed as an argument .
+1. \b  : it removes all the spaces in between the text
+2. \c : suppress trailing new line with backspace interpreter
+3. \n : this option creates new line from where it is used.
+4. \t : this option is used to create horizontal tab spaces.
+5. \r : carriage return with backspace interpreter ‘-e‘ to have specified carriage return in output.
+6. \v : this option is used to create vertical tab spaces.
+7. \a : alert return with backspace interpreter ‘-e‘ to have sound alert.
+8. echo * : this command will print all files/folders, similar to ls command .
+9. -n : this option is used to omit echoing trailing newline .
+
+1.5.
+who =>  The who command is used to get information about currently logged in user on to system
+
+1.6. whoami =>  To display system’s username
+
+1.7. logname => print user´s login name,Print the name of the current user
+
+1.8. uname => uname is a command-line utility that prints basic information about the operating system name and system hardware
+
+-s, (--kernel-name) - Prints the kernel name.
+-n, (--nodename) - Prints the system’s node name (hostname). This is the name the system uses when communicating over the network. When used with the -n option, uname produces the same output as the hostname command.
+-r, (--kernel-release) - Prints the kernel release.
+-v, (--kernel-version) - Prints the kernel version.
+-m, (--machine) - Prints the name of the machine’s hardware name.
+-p, (--processor) - Prints the architecture of the processor.
+-i, (--hardware-platform) - Prints the hardware platform.
+-o, (--operating-system) - Print the name of the operating system. On Linux systems that is “GNU/Linux”
+-a, (--all) - When the -a option is used, uname behaves the same as if the -snrvmo options have been given.
+
+1.9. seq => seq command in Linux is used to generate numbers from FIRST to LAST in steps of INCREMENT. It is a very useful command where we had to generate list of numbers in while, for, until loop.
+
+1. seq LAST : When only one argument is given then it produces numbers from 1 to LAST in step increment of 1. If the LAST is less than 1, then is produces no output.
+2. seq FIRST LAST : When two arguments are given then it produces numbers from FIRST till LAST is step increment of 1. If LAST is less than FIRST, then it produces no output
+3. seq FIRST INCREMENT LAST : When three arguments are given then it produces numbers from FIRST till LAST in step of INCREMENT. If LAST is less than FIRST, then it produces no output.
+4. seq -f “FORMAT” FIRST INCREMENT LAST : This command is used to generate sequence in a formatted manner. FIRST and INCREMENT are optional.
+5. seq -s “STRING” FIRST INCREMENT LAST : This command is uses to STRING to separate numbers. By default this value is equal to "\n". FIRST and INCREMENT are optional.
+6. seq -w FIRST INCREMENT LAST : This command is used to equalise width by padding with leading zeroes. FIRST and INCREMENT are optional.
+
+1. 10. clear => clear screen.
+
+
+
+
+2)
+
+A)
+mkdir a b c
+cd a
+touch a.txt b.txt c.txt
+cd (to come out of folder)
+cd b
+touch a.txt b.txt c.txt
+Cd
+cd c
+touch a.txt b.txt c.txt
+cp -r c a
+
+B)  
+ mv b c
+
+
+c) alias root="ls -lh"
+
+d) mv a cdac
+
+
+3)
+A)
+touch file1.txt file2.txt file3.txt file4.txt file5.txt
+echo 'ashish'>> file1.txt file2.txt file3.txt file4.txt file5.txt  
+b)cat file1.txt file2.txt file3.txt file4.txt file5.txt
+c)touch file1.txt file2.txt file3.txt file4.txt file5.txt
+d) rm -r c cdac a
+
+4)
+vi testfile
+i to insert text 
+escape to leave insert
+:wq to exit
+a)cat testfile
+b)cat -n testfile
+c) tac testfile
+d) cat file1 file2 file3
+
+5)
+a)column filename.txt
+b)sort filename.txt
+ sort -r filename.txt
+c)mkdir .aa .bb .c.txt 
+ls -a
+d)touch -a file1.txt file2.txt
+ls -t 
+ls -rt
+e)ls -r
+f)ls -l
+g)ls -ld
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+1)mkdir pratik1
+touch a.txt b.txt c.txt dtxt
+chmod u-rwx pratik1
+a)chmod u+rw- pratik1
+b)chmod +r--
+c) chmod +x
+
+2)chmod +x pratik1
+3)chmod -wx pratik1	
+4)echo * pratik1	
+5)echo * /etc/
+6)find /etc -type f -name "*.conf"
+7)echo 'helloo' >> a.txt
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1)
+
+mkdir a
+cd a
+touch a.txt 
+touch .hidden.txt
+a.
+mkdir b
+cd b
+touch b.txt 
+touch .hidden1.txt
+b.mkdir c
+touch c.txt 
+touch .hidden2.txt
+c. cp -r  c a
+d.cp -r a/a.txt a/b
+ cp -r a/c/ a/b
+
+2)
+chmod a=r c
+
+3)permission denied
+4)mkdir data
+5) chmod +rw b
+6)mkdir data2
+7)touch data.txt
+8)mv c copied_dir
+9)chmod +x copied_dir
+10)ls
+11)permission denied for hidden file,c.txt file
+12)mv a/b/data/ a
+13)sudo chmod
+14)chmod o+rwx a
+15)mkdir sample
+16)mkdir x
+17)mv  x a
+18)mkdir movies
+21)chmod a=rwx a
+25)rm b.txt
+
+
+
+
+
