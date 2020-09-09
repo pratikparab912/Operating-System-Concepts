@@ -1,0 +1,179 @@
+1. Write a script to create 10 directories, say a1,a2,...,a10
+->mkdir a1,a2,a3,a4,a5,a6,a7,a8,a9,a10
+
+2. Write a menu based script to perform following string operations
+->
+  a) To find length of a string
+    -> echo -n hello | wc -m
+ 
+  c) Copying string
+    ->
+
+  d) Concatenation of strings
+   -> obj1="Hello,"
+      obj2=" World"
+      obj3="$obj1$obj2"
+      echo "$obj3"
+  e) Compare two strings
+   -> 
+      obj1="hello"
+      obj2="world"
+
+      if [ "$obj1" = "$obj2" ]; then
+        echo "Strings are equal."
+      else
+        echo "Strings are not equal."
+      fi
+    
+  f) Reversing a string
+    -> $ echo welcome | rev
+
+4. Write a script that print environment variable(Print $HOME,$PATH,$SHELL,$HISTORY,$LOGNAME,$TERM)
+->  echo $HOME, echo $HISTORY,  echo $LOGNAME, echo $PATH,  echo $TERM,  echo $SHELL
+
+6. Write a shell script to print all files permissions and name of file
+-> ls -al
+
+---------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
+
+##SHELL_PROGRAMS
+
+1. Write a script To check given year is leap or not.
+
+->
+    echo "enter a year"
+    read YEAR
+
+    if (( ($YEAR % 4) == 0 ))
+    then 
+        echo "Given Year Is Leap Year"
+    else
+        echo "Given Year Is Not Leap Year"
+   fi
+
+2. Write a script to print day of the week using
+b) case 
+echo "enter number between 1 to 7"
+read num
+case $num in
+1) echo "Sunday" ;;
+2) echo "Monday" ;;
+3) echo "Tuesday" ;;
+4) echo "Wednesday" ;;
+5) echo "Thursday" ;;
+6) echo "Friday" ;;
+7) echo "Saturday" ;;
+esac
+
+  
+a) elif	
+echo "enter number between 1 to 7"
+read num
+if [[ $num -eq 1 ]]
+then 
+       echo "Sunday"  
+elif [[ $num -eq 2 ]]
+then 
+      echo "Monday"
+elif [[ $num -eq 3 ]]
+then
+      echo "Tuesday"
+elif [[ $num -eq 4]]
+then 
+      echo "Wednesday"
+elif [[ $num -eq 5]]
+then 
+      echo "Thursday"
+elif [[ $num -eq 6 ]]
+then 
+      echo "Friday"
+elif [[ $num -eq 7 ]]
+then 
+      echo "saturday"
+fi
+
+
+3. 
+ a) Write a script to find biggest of three no.s
+->
+echo "enter 1st number"
+read num1
+echo "enter 1st number"
+read num2
+echo "enter 1st number"
+read num3
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+ then 
+   echo " $num1 is greatest number"
+
+   elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+     then
+       echo " $num2 is greatest number"
+else
+      echo " $num3 is greatest number"
+fi
+
+
+b) To find avg of 3 no.s, read no.s from keyboard
+->
+echo "enter 1st number"
+read num1
+echo "enter 1st number"
+read num2
+echo "enter 1st number"
+read num3
+sum=`expr $num1 + $num2 + $num3`
+avg=`expr $sum / 3`
+echo "Sum = $sum"
+echo "Average = $avg"
+
+4. Write a program to check wahether given no.is even or odd
+->
+read -p "Enter a number: " number
+if [ $((number%2)) -eq 0 ]
+then
+  echo "Number is even."
+else
+  echo "Number is odd."
+fi
+
+6.Write a program to find sum and product of two no.s using let,expr,bc
+->
+b) expr
+echo "Enter two numbers"
+read num1 num2
+sum=`expr $num1 + $num2`
+echo "The sum is $sum"
+
+a) let
+a=10
+b=20
+sum=$(( $a + $b ))
+echo "Sum is $sum"
+
+
+
+7. Write a script to generate Fibonacci series.
+-> 
+N=10 
+a=0  
+b=1 
+echo "The Fibonacci series is : "
+for (( i=0; i<N; i++ )) 
+do
+	echo -n "$a "
+	fn=$((a + b)) 
+	a=$b 
+	b=$fn 
+done
+
+
+8. Write a shell script to reverse the single strings. 
+->
+echo "Hello"|rev
+
+10. Write a shell script to print the reverse of an input number.
+->
+read -p "Enter a number: " num
+echo $num | rev
