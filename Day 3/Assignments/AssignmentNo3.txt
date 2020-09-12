@@ -1,0 +1,225 @@
+1]
+
+#include<unistd.h>
+#include<stdlib.h>
+#include<iostream>
+#include<sys/types.h>
+using namespace std;
+
+int main()
+{
+     
+       pid_t pid;
+        pid=fork();
+
+        if(pid==0)
+        {
+                cout<<"pid of child process : "<<getpid();
+                cout<<endl;
+                cout<<"ppid of child process : "<<getppid();
+                cout<<endl;
+        }
+        else if(pid>0)
+        {
+                cout<<"pid of parent process : "<<getpid();
+                cout<<endl;
+                cout<<"ppid of parent process : "<<getppid();
+                cout<<endl;
+        }
+        else
+        {
+                cout<<"fork failed";
+        }
+        return 0;
+}
+
+OUTPUT
+pid of parent process : 5766
+ppid of parent process : 5761
+pid of child process : 5767
+ppid of child process : 5766
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+2]
+
+#include<iostream>
+#include<unistd.h>
+#include<stdlib.h>
+#include<sched.h>
+
+using namespace std;
+
+int main()
+{
+        int a;
+        a=sched_getscheduler(getpid());
+        switch(a)
+        {
+                case SCHED_OTHER:cout<<"another scheduling policy"<<endl;
+                break;
+                case SCHED_RR:cout<<"round robin scheduler"<<endl;
+                break;
+                case SCHED_FIFO:cout<<"first in first out"<<endl;
+                break;
+
+        }
+return 0;
+}
+
+OUTPUT:
+another scheduling policy
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+3]
+
+#include<iostream>
+#include<unistd.h>
+#include<sched.h>
+using namespace std;
+int main()
+{
+        int a;
+        a=sched_setscheduler(getpid(),SCHED_FIFO,0);
+
+        if(a==0)
+        {
+                cout<<"priority set";
+        }
+        else
+        {
+                cout<<"priority not set";
+        }
+return 0;
+}
+OUTPUT:
+priority not set
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+4]
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class process{
+
+        public:
+                string name;
+                int arrTime;
+                int burstTime;
+                int respTime;
+                int compTime;
+                int waitTime;
+                int turnTime;
+};
+
+int main()
+{
+        int i,noproc,avgwaitTime,avgturnTime,sum1 = 0,sum2 = 0;
+        cout<<"no of process=\n";
+        cin>>noproc;
+        process p[ noproc ];
+
+        for(i=0;i<noproc;i++)
+        {
+                cout<<"\n enter the process "<<i<<" name = ";
+                cin>>p[i].name;
+
+                cout<<"\n enter the process "<<i<<" arrival time = ";
+                cin>>p[i].arrTime;
+
+                cout<<"\n enter the process "<<i<<" burst time = ";
+                cin>>p[i].burstTime;
+
+        }
+
+        for(i=0; i<noproc; i++)
+        {
+if( i== 0){
+                        p[i].respTime = p[i].arrTime;
+                        p[i].compTime = p[i].respTime + p[i].burstTime;
+                        p[i].waitTime = p[i].respTime - p[i].arrTime;
+                        p[i].turnTime = p[i].compTime - p[i].arrTime;
+                }
+                else{
+
+                        p[i].respTime = p[i-1].respTime + p[i-1].burstTime;
+                        p[i].compTime = p[i].respTime + p[i].burstTime;
+                        p[i].waitTime = p[i].respTime - p[i].arrTime;
+                        p[i].turnTime = p[i].compTime - p[i].arrTime;
+                }
+        }
+
+
+        for(i=0;i<noproc;i++)
+        {
+                sum1= sum1 + p[i].waitTime;
+                sum2= sum2 + p[i].turnTime;
+        }
+
+        avgwaitTime = sum1/noproc;
+        avgturnTime = sum2/noproc;
+
+        for(i=0;i<noproc;i++)
+        {
+ cout<<"\n process no "<<i+1;
+                cout<<"\n name "<<p[i].name;
+                cout<<"\n arrival time "<<p[i].arrTime;
+                cout<<"\n burst time "<<p[i].burstTime;
+                cout<<"\n response time "<<p[i].respTime;
+                cout<<"\n complete time "<<p[i].compTime;
+                cout<<"\n waiting time "<<p[i].waitTime;
+                cout<<"\n turnaround time "<<p[i].turnTime;
+                cout<<endl;
+        }
+ cout<<"\n average waiting time = "<<avgwaitTime;
+        cout<<"\n average turnaround time ="<<avgturnTime;
+return 0;
+}
+
+OUTPUT
+
+no of process=
+3
+
+ enter the process 0 name = P1
+ enter the process 0 arrival time = 0     
+ enter the process 0 burst time = 3
+
+ enter the process 1 name = P2
+ enter the process 1 arrival time = 2
+ enter the process 1 burst time = 5
+
+ enter the process 2 name = P3
+ enter the process 2 arrival time = 5
+ enter the process 2 burst time = 6
+
+ process no 1
+ name P1
+ arrival time 0
+ burst time 3
+ response time 0
+ complete time 3
+ waiting time 0
+ turnaround time 3
+
+ process no 2
+ name P2
+ arrival time 2
+ burst time 5
+ response time 3
+complete time 8
+ waiting time 1
+ turnaround time 6
+
+ process no 3
+ name P3
+ arrival time 5
+ burst time 6
+ response time 8
+ complete time 14
+ waiting time 3
+ turnaround time 9
+
+ average waiting time = 1
+ average turnaround time =6
